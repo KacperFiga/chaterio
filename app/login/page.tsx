@@ -1,10 +1,10 @@
-import RegisterForm from './components/AuthForm';
+import AuthForm from "../components/AuthForm";
 
 export default function Home() {
 
   return (
     <div>
-      <RegisterForm/>
+      <AuthForm/>
     </div>
   );
 }
