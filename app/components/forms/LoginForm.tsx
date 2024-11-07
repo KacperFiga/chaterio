@@ -11,7 +11,16 @@ export const LoginForm = ({changeFormType}) => {
 
     const {register, handleSubmit, formState:{errors}} = useForm<FormData>();
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = async data => {
+      const res = await fetch('api/users/login', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(data)
+      })
+      
+    }
 
   return (
     <div className="bg-secondary w-[350px] mt-[50px] mx-auto rounded-sm p-4 pt-7">
